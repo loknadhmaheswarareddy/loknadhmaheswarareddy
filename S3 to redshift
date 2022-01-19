@@ -1,0 +1,54 @@
+import pandas as pd
+import numpy as np
+import datetime
+import csv
+
+print("test")
+file_path= (r"C:\Users\Loknadh.reddy\Documents\JnJ_Epi_Repository_Atopic_Dermatitis_1.02_SN.xlsx")
+df = pd.read_excel(r'C:\Users\Loknadh.reddy\Documents\JnJ_Epi_Repository_Atopic_Dermatitis_1.02_SN.xlsx')
+#print(df.head())
+
+therapy_values= df.Therapy.unique()
+print(therapy_values)
+
+ds_values= df["Data Source"].unique().tolist()
+print(ds_values) # ['Data Monitor' 'Global Data' 'Clarivate' 'Kantar Health']
+
+
+Geography_values=df.Geography.unique()
+print(Geography_values) # ['United States' 'Japan' 'France' 'Germany' 'Italy' 'Spain'
+ # 'United Kingdom' '7MM' '16MM' 'Australia' 'China' 'India' 'South Korea'
+#  'Russia' 'South Africa' 'Canada' 'Mexico' 'Brazil']
+
+disease_values= df.Disease.unique()
+print(disease_values)
+
+ea_values= df["Epidemiology Attribute"].unique()
+print(ea_values)
+
+eap_values= df["Epidemiology Attribute Parametes"].unique()
+print(eap_values)
+
+year_values= df.Year.unique()
+print(year_values)
+
+gender_values = df.Gender.unique()
+print(gender_values)
+
+age_values= df["Age "].unique()
+print(age_values)
+
+dis_values= df["Disease Severity"].unique()
+print(dis_values)
+
+sd_values= df["Sub-Disease"].unique()
+print(sd_values)
+
+ac_values= df["Associated Conditions"].unique()
+print(ac_values)
+
+pop_values= df["Population"].unique()
+print(pop_values)
+
+lud_values= df["Last Updated Date"].unique()
+print(lud_values)
